@@ -1,0 +1,11 @@
+運行 ryu-manager
+ryu-manager lab2.py
+
+Restful-API
+curl -X POST -H "Content-Type: application/json" -d '{"src":"h1","dst":"h2"}' http://127.0.0.1:8080/v1.0/dualpath/route
+
+topology mininet set
+sudo mn --custom=topo.py --topo=mytopo --controller=remote,ip=127.0.0.1,port=6653 --switch=ovs,protocols=OpenFlow13
+
+cleaning
+sudo mn -c
